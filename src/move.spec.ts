@@ -1,4 +1,6 @@
 import move from './move';
+import ERRORS from './types/contants';
+import { List } from './types/types';
 
 describe('move', () => {
   it('moves given file to another folder', () => {
@@ -67,5 +69,11 @@ describe('move', () => {
     ];
 
     expect(() => move(list, '2', '4')).toThrow('You cannot specify a file as the destination');
+  });
+
+  it('throws error if given list is empty', () => {
+    const list: List[] = [];
+
+    expect(() => move(list, '2', '4')).toThrow(ERRORS.EMPTY_LIST);
   });
 });
