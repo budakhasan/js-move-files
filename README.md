@@ -1,6 +1,5 @@
-# Atolye15 Question
-
-Please update `src/move.ts` to pass tests. You can find the tests in `src/move.spec.ts`.
+# -- Move files -- 
+Move file from folder to another location which is given
 
 ## Acceptance criteria
 
