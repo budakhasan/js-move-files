@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+
+echo '---> Styling, testing and building project before committing'
+
+# Format code
+yarn format
+
+## Run tests
+#yarn test ||
+#(
+#    echo '---> One ore more test are failed. Check your code... <---'
+#    false;
+#)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
+
+
