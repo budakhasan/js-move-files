@@ -1,14 +1,9 @@
-interface Api {
+export type File = {
   [key: string]: unknown;
-}
-
-export type File = Api & {
   id: string;
   name: string;
 };
 
-export type List = Api & {
-  id: string;
-  name: string;
+export type List = File & {
   files: File[];
 };

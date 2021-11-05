@@ -11,7 +11,7 @@ export default function move<T extends List, U extends string>(
   if (list.length === 0) throw new Error(ERRORS.EMPTY_LIST);
   // Check destination_id is match with any folder. If not throw error
   const destinationFolderIndex = findIndex(list, 'id', destination);
-  if (destinationFolderIndex === -1) throw new Error(ERRORS.FILE_IS_A_DESTINATION);
+  if (destinationFolderIndex === -1) throw new Error(ERRORS.DESTINATION_IS_A_FILE);
   /*
    * I used traditional `for loop` because performance reasons.
    * the given `list` can be contain huge list
